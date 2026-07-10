@@ -95,6 +95,7 @@ const RunMap = ({
     () => getMapStyle(MAP_TILE_VENDOR, currentMapTheme, MAP_TILE_ACCESS_TOKEN),
     [currentMapTheme]
   );
+  const canUseMapboxLanguage = IS_CHINESE && MAP_TILE_VENDOR === 'mapbox';
 
   // Mapbox GL JS requires a token even when using other vendors
   // Always use the MAPBOX_TOKEN from const.ts (user may have set their own token)
@@ -252,7 +253,8 @@ const RunMap = ({
     (ref: MapRef) => {
       if (ref !== null) {
         const map = ref.getMap();
-        if (map && IS_CHINESE) {
+        // MapboxLanguage only supports Mapbox vector-tile styles.
+        if (map && canUseMapboxLanguage) {
           map.addControl(new MapboxLanguage({ defaultLanguage: 'zh-Hans' }));
         }
         // all style resources have been downloaded
@@ -286,7 +288,7 @@ const RunMap = ({
         switchLayerVisibility(map, lights);
       }
     },
-    [lights, switchLayerVisibility]
+    [canUseMapboxLanguage, lights, switchLayerVisibility]
   );
 
   const initGeoDataLength = geoData.features.length;
