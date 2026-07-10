@@ -26,3 +26,11 @@ route.png
 route.svg
 
 .env
+
+# 开发环境缓存数据
+run_page/data.db
+imported.json
+/GPX_OUT
+/FIT_OUT
+/PNG_OUT
+/TCX_OUT
