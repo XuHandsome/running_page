@@ -27,12 +27,11 @@ const data: ISiteMetadataResult = {
     {
       name: 'Wiki',
       url: 'https://deepwiki.com/XuHandsome/running_page',
-    }
-    ,
+    },
     {
       name: 'Source',
       url: 'https://github.com/XuHandsome/running_page',
-    }
+    },
   ],
 };
 
