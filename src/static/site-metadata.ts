@@ -16,22 +16,23 @@ const getBasePath = () => {
 
 const data: ISiteMetadataResult = {
   siteTitle: 'Running Page',
-  siteUrl: 'https://yihong.run',
-  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
-  description: 'Personal site and blog',
+  siteUrl: 'https://r.ohops.org',
+  logo: 'https://ocs-cn-north1.heytapcs.com/titans-usercenter-avatar-bucket-cn/zr/3t/mg/zr3tmgegc63aqavys7kvnx4f5q000000.jpg?20250316192146',
+  description: 'Personal site',
   navLinks: [
     {
       name: 'Summary',
       url: `${getBasePath()}/summary`,
     },
     {
-      name: 'Blog',
-      url: 'https://github.com/yihong0618/gitblog',
-    },
+      name: 'Wiki',
+      url: 'https://deepwiki.com/XuHandsome/running_page',
+    }
+    ,
     {
-      name: 'About',
-      url: 'https://github.com/yihong0618/running_page/blob/master/README-CN.md',
-    },
+      name: 'Source',
+      url: 'https://github.com/XuHandsome/running_page',
+    }
   ],
 };
 
